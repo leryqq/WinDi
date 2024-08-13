@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/imageView_TaskFromUserAvatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_TaskFromUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Michael"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_TaskFromUserAvatar"
+            app:layout_constraintStart_toEndOf="@+id/imageView_TaskFromUserAvatar"
+            app:layout_constraintTop_toTopOf="@+id/imageView_TaskFromUserAvatar" />
+
+        <ImageView
+            android:id="@+id/imageview_ArrowFromTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:src="@drawable/ic_arrow_to"
+            app:layout_constraintBottom_toBottomOf="@id/textView_TaskFromUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textView_TaskFromUserName" />
+
+        <ImageView
+            android:id="@+id/imageView_TaskToUserAvatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_avatar"
+            app:layout_constraintStart_toEndOf="@+id/imageview_ArrowFromTo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_TaskToUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Catherine"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_TaskToUserAvatar"
+            app:layout_constraintStart_toEndOf="@+id/imageView_TaskToUserAvatar"
+            app:layout_constraintTop_toTopOf="@+id/imageView_TaskToUserAvatar" />
+
+        <TextView
+            android:id="@+id/textView_taskPreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:breakStrategy="high_quality"
+            android:ellipsize="end"
+            android:hyphenationFrequency="normal"
+            android:maxLines="2"
+            android:paddingVertical="12dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur delectus ex magni obcaecati odit quibusdam quos sunt tempora veritatis. Aliquam culpa, dignissimos dolor, harum hic in optio praesentium recusandae repellendus tempora tenetur velit. Alias, atque, consequuntur, corporis dicta est fuga ipsum iure neque nesciunt obcaecati rem sed temporibus veritatis!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView_TaskFromUserAvatar" />
+
+        <TextView
+            android:id="@+id/textView_taskCreationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/creation_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_taskPreview" />
+
+        <TextView
+            android:id="@+id/textView_taskDeadlineDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/deadline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_taskCreationDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

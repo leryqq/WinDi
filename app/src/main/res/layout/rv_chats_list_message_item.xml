@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="2dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp">
+
+        <RelativeLayout
+            android:id="@+id/parentRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView_Avatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/circle_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignEnd="@id/imageView_Avatar"
+                android:layout_alignBottom="@+id/imageView_Avatar"
+                android:background="@drawable/circle_status" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Michael"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/parentRelative"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="10:15"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_messagePrivew"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:breakStrategy="high_quality"
+            android:ellipsize="end"
+            android:hyphenationFrequency="normal"
+            android:maxLines="2"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur delectus ex magni obcaecati odit quibusdam quos sunt tempora veritatis. Aliquam culpa, dignissimos dolor, harum hic in optio praesentium recusandae repellendus tempora tenetur velit. Alias, atque, consequuntur, corporis dicta est fuga ipsum iure neque nesciunt obcaecati rem sed temporibus veritatis!"
+            app:layout_constraintEnd_toStartOf="@id/textView_messageTime"
+            app:layout_constraintStart_toEndOf="@+id/parentRelative"
+            app:layout_constraintTop_toBottomOf="@id/textView_userName" />
+
+        <ImageView
+            android:id="@+id/imageView_MessageCheck"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_double_check"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/light_grey" />
+
+        <TextView
+            android:id="@+id/textView_messageCounter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/circle_avatar"
+            android:backgroundTint="@color/blue"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView_messageTime"
+            app:layout_constraintStart_toStartOf="@+id/textView_messageTime"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

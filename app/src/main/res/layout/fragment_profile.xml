@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_profileBackground"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/main_gradient"/>
+
+        <ImageView
+            android:id="@+id/imageView_profileAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/circle_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_profileUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/robotobold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="Michael Lin"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_profileAvatar" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_profileUserName">
+
+
+            <Button
+                android:id="@+id/button_createPostProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue_main"
+                android:text="@string/create"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_profileUserName"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/button_editProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_main"
+                android:text="@string/edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_createPostProfile"
+                app:layout_constraintTop_toBottomOf="@id/textView_profileUserName"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/phone_number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_buttons" />
+
+        <TextView
+            android:id="@+id/textView_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/country"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_phoneNumber" />
+
+        <TextView
+            android:id="@+id/textView_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/birth_day"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_country" />
+
+        <TextView
+            android:id="@+id/textView_zodiac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/zodiac"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
+
+        <TextView
+            android:id="@+id/textView_aboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/robotobold"
+            android:text="@string/about_me"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_zodiac" />
+
+        <TextView
+            android:id="@+id/textView_aboutMeBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur delectus ex magni obcaecati odit quibusdam quos sunt tempora veritatis. Aliquam culpa, dignissimos dolor, harum hic in optio praesentium recusandae repellendus tempora tenetur velit. Alias, atque, consequuntur, corporis dicta est fuga ipsum iure neque nesciunt obcaecati rem sed temporibus veritatis!"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_aboutMe" />
+
+        <TextView
+            android:id="@+id/textView_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/robotobold"
+            android:text="@string/photos"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_aboutMeBody" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_profilePhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_photos"
+            tools:listitem="@layout/rv_photo_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

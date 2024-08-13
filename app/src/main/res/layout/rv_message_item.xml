@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="2dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/textView_messageBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur delectus ex magni obcaecati odit quibusdam quos sunt tempora veritatis. Aliquam culpa, dignissimos dolor, harum hic in optio praesentium recusandae repellendus tempora tenetur velit. Alias, atque, consequuntur, corporis dicta est fuga ipsum iure neque nesciunt obcaecati rem sed temporibus veritatis!"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_messageTime_Chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:fontFamily="@font/robotolight"
+            android:text="10:15"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView_messageCheck_Chat"
+            app:layout_constraintTop_toBottomOf="@+id/textView_messageBody" />
+
+        <ImageView
+            android:id="@+id/imageView_messageCheck_Chat"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_double_check"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_messageBody"
+            app:tint="@color/light_grey" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

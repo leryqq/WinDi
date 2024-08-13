@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">WinDi</string>
+    <string name="chats">Chats</string>
+    <string name="tasks">Tasks</string>
+    <string name="profile">Profile</string>
+    <string name="notes">Notes</string>
+    <string name="creation_date">Creation Date:</string>
+    <string name="deadline">Deadline:</string>
+    <string name="comments">Comments</string>
+    <string name="message">Message</string>
+    <string name="edit">Edit</string>
+    <string name="create">Create</string>
+    <string name="photos">Photos</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="country">Country</string>
+    <string name="birth_day">Birth Day</string>
+    <string name="zodiac">Zodiac</string>
+    <string name="about_me">About Me</string>
+    <string name="required">Required</string>
+    <string name="save">Save</string>
+    <string name="login">Login</string>
+    <string name="send_code">Send Code</string>
+    <string name="continue_">Continue</string>
+    <string name="login_details">We will send a code (via SMS text message) to your phone number</string>
+</resources>
